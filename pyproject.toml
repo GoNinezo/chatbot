@@ -1,0 +1,38 @@
+[project]
+name = "chatbot"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "enzo charbit"}
+]
+readme = "README.md"
+requires-python = "<=3.11.13,>=3.11"
+dependencies = [
+    "mathparse (==0.1)",
+    "chatterbot (>=1.2.6,<2.0.0)"
+]
+packages = [{include = "src"}]
+package-mode = false
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.4.2"
+isort = "^5.13.2"
+ruff = "^0.5.2"
+mypy = "^1.10.1"
+types-pyyaml = "^6.0.12.20240311"
+
+[tool.isort]
+profile = "black"
+
+[tool.mypy]
+python_version = "3.11"
+ignore_missing_imports = true
+exclude = "^(.*\\.md|.*\\.yaml|.*\\.lock|.*\\.ini)$"
+
+[tool.ruff]
+extend-exclude = ["*.yaml", "poetry.lock", "pyproject.toml", "README.md"]
+line-length = 120
