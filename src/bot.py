@@ -8,7 +8,7 @@ chatbot = ChatBot("Chatpot")
 trainer = ListTrainer(chatbot)
 trainer.train([
     "Hi",
-    "Welcome, friend 🤗",
+    "Welcome, friend 🤗 :)",
 ])
 trainer.train([
     "Are you a plant?",
